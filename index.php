@@ -12,7 +12,6 @@
 <body>
   <?php
   require 'assets/php/config.php';
-  // print_r($_SESSION);
   $dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
   $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 
