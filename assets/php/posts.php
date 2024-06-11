@@ -1,6 +1,5 @@
 <?php
 require 'config.php';
-// print_r($_SESSION);
 if (!isset($_SESSION['user_id'])) {
   header("Location: ../../index.php");
   exit;
@@ -18,9 +17,7 @@ try {
               LIMIT 100";
   $statement = $pdo->query($query);
   $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
-  // echo "<pre>";
-  // print_r($posts);
-  // echo "</pre>";
+ 
 } catch (PDOException $e) {
   echo "Error: " . $e->getMessage();
   exit;
@@ -95,7 +92,7 @@ try {
       });
     });
 
-    // Add back functionality
+    // add back functionality
     const backBtn = document.getElementById("back-btn");
     backBtn.addEventListener("click", () => {
       alert('Logging you out (session terminated) ...');
