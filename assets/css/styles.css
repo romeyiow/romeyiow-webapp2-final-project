@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* ================ Colors ================ */
+  --clr-red: #fe2d55;
+  --clr-green: #38c559;
+  --clr-blue: #017afe;
+  --clr-cyan: #2fb0c8;
+  --clr-lavender: #5856d6;
+  --clr-white: #fafafa;
+  --clr-off-white: #e8e8e8;
+  --clr-black: #212121;
+  --clr-gray: #727272;
+
+  /* ================ Font size (fz) and font family (fm) ================ */
+  --fz-title: 6.5536rem;
+  --fz-h1: 4.096rem;
+  --fz-h2: 2.56rem;
+  --fz-h3: 1.6rem;
+  --fz-pa: 1rem;
+
+  --ff-content: "Raleway", sans-serif;
+  --ff-display: "Hepta Slab", serif;
+
+  /* ================ z index ================ */
+  --z-fixed: 100;
+  --z-back: 0;
+  --z-backward: 5;
+  --z-forward: 10;
+  --z-front: 100;
+
+  /* ================ Font weights ================ */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+/* ================ BASE CSS ================ */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+body {
+  font-family: var(--ff-content);
+  font-size: var(--fz-pa);
+  font-weight: var(--fw-regular);
+
+  background-color: var(--clr-black);
+  background: linear-gradient(45deg, #544E94, #92DDC2);
+  color: var(--clr-black);
+  text-rendering: optimizeSpeed;
+
+  max-width: 100vw;
+  height: 100vh;
+  overflow: auto;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* transition: all 0.3s ease;  */
+  /* border: 3px dotted red; */
+}
+
+div,
+form {
+  width: 100%;
+  height: max-content;
+}
+
+
+/* ================ UTILITY CLASSES ================ */
+.flex-col-center-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================ MAIN CSS ================ */
+section.pseudo-screen {
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 20px;
+
+  width: 375px;
+  height: 667px;
+  background-color: #0A0171;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(30px);
+
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 30px 30px 35px #0A017170; */
+  /* box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1); */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+div.screen-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* border: 1px solid red; */
+}
+
+.left-infos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+
+
+  /* border: 1px solid red; */
+}
+
+.right-infos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+
+  /* border: 1px solid red; */
+}
+
+div.greetings {
+  /* border: 1px solid red; */
+  margin-top: 40px;
+  gap: 15px;
+  color: var(--clr-white);
+}
+
+.greetings h1 {
+  font-size: 20px;
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+.greetings p {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+div.form-wrapper {
+  margin-top: 30px;
+
+
+
+  /* border: 1px solid red; */
+}
+
+form {
+  gap: 15px;
+}
+
+form input,
+form button {
+  height: 58px;
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 20px;
+  border: 1px solid var(--clr-white);
+  font-size: 14px;
+  color: var(--clr-white);
+  background-color: transparent;
+
+}
+
+input::placeholder {
+  color: var(--clr-off-white);
+}
+
+form button:focus,
+form input:focus {
+  outline: none;
+}
+
+form button:focus {
+  border:2px solid white;
+}
+
+form button {
+  margin-top: 15px;
+  background-color: #2BC990;
+  color: var(--clr-white);
+  font-size: 20px;
+  font-weight: bold;
+  border-color: #2BC990;
+}

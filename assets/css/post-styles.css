@@ -1,0 +1,47 @@
+div.post-card {
+    /* border: 1px solid red; */
+    min-height: 80%;
+    border-radius: 5px;
+    padding: 20px;
+
+    background-color: #fffFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.card-poser-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-poser-info span {
+    color: var(--clr-blue);
+    font-size: 14px;
+}
+
+.visuals-post {
+    height: 150px!important;
+    border-radius: 5px;
+    border: 2px solid var(--clr-off-white);
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-picture {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--clr-off-white);
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.title-post h1{
+    text-transform: capitalize;
+}
