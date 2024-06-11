@@ -1,6 +1,6 @@
 <?php
 require 'config.php';
-// print_r($_SESSION);
+
 if (!isset($_SESSION['user_id'])) {
   header("Location: ../../index.php");
   exit;
@@ -19,7 +19,7 @@ $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 try {
   $pdo = new PDO($dsn, $user, $password, $options);
 
-  // Fetch the post, user profile, and photos from the local database
+  
   $query = "SELECT p.*, u.name, u.email, dp.thumbnail_url AS DPUrl, vp.url AS VisualUrl
               FROM posts p
               JOIN users u ON p.user_id = u.id
